@@ -11,7 +11,7 @@ function validarCampo(elementId ) {
 
         const regex = /([0-9]){7,8}-([0-9kK])/
         if (!regex.test(campoValor)) {
-            errorSpan.innerHTML = "Rut invalido"
+            errorSpan.innerHTML = "Este Rut invalido"
             errorSpan.style.color = "#ff0000"
         }
     }
