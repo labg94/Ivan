@@ -7,7 +7,7 @@ function validarCampo(elementId ) {
     if (!campoValor || !campoValor.trim()) {
         errorSpan.innerHTML = "Campo invalido"
         errorSpan.style.color = "#ff0000"
-    }else if(elementId === "rut"){
+    } else if (elementId === "rut") {
 
         const regex = /([0-9]){7,8}-([0-9kK])/
         if (!regex.test(campoValor)) {
@@ -20,4 +20,5 @@ function validarCampo(elementId ) {
 function validFields() {
     validarCampo("nombre");
     validarCampo("rut");
+    console.log("All validations done")
 }
