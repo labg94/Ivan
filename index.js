@@ -1,3 +1,8 @@
+function addError(errorSpan, mensaje = "Campo invalido") {
+    errorSpan.innerHTML = mensaje
+    errorSpan.style.color = "#ff0000"
+}
+
 function validarCampo(elementId ) {
     let campo = document.getElementById(elementId);
     let campoValor = campo.value;
@@ -5,14 +10,12 @@ function validarCampo(elementId ) {
 
 
     if (!campoValor || !campoValor.trim()) {
-        errorSpan.innerHTML = "Campo invalido"
-        errorSpan.style.color = "#ff0000"
+        addError(errorSpan);
     } else if (elementId === "rut") {
 
         const regex = /([0-9]){7,8}-([0-9kK])/
         if (!regex.test(campoValor)) {
-            errorSpan.innerHTML = "Este Rut invalido"
-            errorSpan.style.color = "#ff0000"
+            addError(errorSpan, "Este Rut invalido");
         }
     }
 }
