@@ -23,5 +23,5 @@ function validarCampo(elementId ) {
 function validFields() {
     validarCampo("nombre");
     validarCampo("rut");
-    console.log("All validations done")
+    console.log("Todas las validaciones se hicieron")
 }
